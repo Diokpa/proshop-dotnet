@@ -1,4 +1,5 @@
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks.Dataflow;
 using Core.Entities;
@@ -12,5 +13,6 @@ namespace Core.Interfaces
     Task<IReadOnlyList<T>> ListAllAsync();
     Task<T> GetEntityWithSpec(ISpecification<T> spec);
     Task<IReadOnlyList<T>> ListAsync(ISpecification<T> spec);
+    Task<int> CountAsync(ISpecification<T> spec);
   }
 }
